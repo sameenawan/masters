@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>HELLO</title>
+	<title>@yield('title','Information Systems Course Choices')</title>
 	<style>
 		@import url(//fonts.googleapis.com/css?family=Lato:700);
 
@@ -28,15 +28,18 @@
 		}
 
 		h1 {
-			font-size: 32px;
+			font-size: 62px;
 			margin: 16px 0 0 0;
 		}
 	</style>
 </head>
 <body>
+
+
+@yield('content')
+
 	<div class="welcome">
-	
-<h1>I love the color <?php echo $color; ?> as my favorite</h1>
+<h1>HELLO WORLD SAMEEN HERE</h1>		
 	</div>
 </body>
 </html>
