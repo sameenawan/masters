@@ -32,6 +32,10 @@
 			margin: 16px 0 0 0;
 		}
 	</style>
+
+@yield('head')
+	
+
 </head>
 <body>
 
@@ -41,19 +45,31 @@
 
 
 
-@if(Auth::check())
-    <a href='/logout'>Log out {{ Auth::user()->email; }}</a>
-@else 
-    <a href='/signup'>Sign up</a> or <a href='/login'>Log in</a>
-@endif
 
-
-
-
-@yield('content')
+	@if(Auth::check())
+		<a href='/logout'>Log out {{ Auth::user()->email; }}</a><br><br>
+		<a href='/course'>View all Books</a> | 
+		<a href='/tag'>View all Tags</a>  |
+		<a href='/course/search'>Search (with Ajax!)</a>
+	@else 
+		<a href='/signup'>Sign up</a> or <a href='/login'>Log in</a>
+	@endif
+	
 
 	<div class="welcome">
 <h1>HELLO WORLD SAMEEN HERE</h1>		
 	</div>
+
+
+
+	@yield('content')
+	
+	@yield('body')
+	
+	@yield('footer')
+
+
+
+
 </body>
 </html>

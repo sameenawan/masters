@@ -51,7 +51,7 @@ class UserController extends BaseController {
 		# Log in
 		Auth::login($user);
 		
-		return Redirect::to('/list')->with('flash_message', 'Welcome to Foobooks!');
+		return Redirect::to('/list')->with('flash_message', 'Welcome to Harvard Masters in IT');
 				
 	}
 	
